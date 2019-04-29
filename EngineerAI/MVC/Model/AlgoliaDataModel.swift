@@ -1,5 +1,5 @@
 //
-//  PostDataModel.swift
+//  AlgoliaDataModel.swift
 //  EngineerAI
 //
 //  Created by Apple on 29/04/19.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Algolia: Codable {
+    var hits: [Post] = []
+    var page: Int = 0
+    var nbPages: Int = 0
+}
