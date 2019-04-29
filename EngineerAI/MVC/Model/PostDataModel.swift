@@ -16,15 +16,3 @@ class Post: Codable {
 
 //Make the model selectable
 extension Post: HSSelectable { }
-
-
-extension Post {
-    var displableCreatedData: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let date = dateFormatter.date(from:self.created_at)!
-        
-        dateFormatter.dateFormat = "MMMM dd, yyyy HH:mm a"
-        return dateFormatter.string(from: date)
-    }
-}
